@@ -11,9 +11,13 @@ const App = () => {
   const [bad, setBad] = useState(0);
 
   const handleClick = event => {
-    if (event.target.id === 'good') setGood(prev => prev + 1);
-    else if (event.target.id === 'neutral') setNeutral(prev => prev + 1);
-    else if (event.target.id === 'bad') setBad(prev => prev + 1);
+    if (event.target.id === 'good') {
+      setGood(prev => prev + 1);
+    } else if (event.target.id === 'neutral') {
+      setNeutral(prev => prev + 1);
+    } else if (event.target.id === 'bad') {
+      setBad(prev => prev + 1);
+    }
   };
 
   const TotalFeedback = good + neutral + bad;
